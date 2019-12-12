@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableView", "TableView\Tabl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListe", "ToDoListe\ToDoListe.csproj", "{3D5F6E66-7D57-4823-839F-A19D43140C7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoNavBar", "ToDoNavBar\ToDoNavBar.csproj", "{547AB1B5-0961-49CC-AE52-721EFBB5D562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhone = Debug|iPhone
@@ -55,6 +57,14 @@ Global
 		{3D5F6E66-7D57-4823-839F-A19D43140C7C}.Release|iPhone.Build.0 = Release|iPhone
 		{3D5F6E66-7D57-4823-839F-A19D43140C7C}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{3D5F6E66-7D57-4823-839F-A19D43140C7C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Debug|iPhone.Build.0 = Debug|iPhone
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Release|iPhone.ActiveCfg = Release|iPhone
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Release|iPhone.Build.0 = Release|iPhone
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{547AB1B5-0961-49CC-AE52-721EFBB5D562}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
