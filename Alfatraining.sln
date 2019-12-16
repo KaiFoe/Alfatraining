@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoNavBar", "ToDoNavBar\To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeichnen", "Zeichnen\Zeichnen.csproj", "{32B13266-B7D2-43C5-9888-4D4D6C70310B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Touch1", "C:\Users\Alfa-Dozent\Downloads\Xamarin_iOS___Touch_in_iOS\Touch1.csproj", "{93027FF2-0AA6-4106-A3B3-374F5FE999A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropUebung", "DragDropUebung\DragDropUebung.csproj", "{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Touch1", "Touch\Touch1.csproj", "{93027FF2-0AA6-4106-A3B3-374F5FE999A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,22 @@ Global
 		{32B13266-B7D2-43C5-9888-4D4D6C70310B}.Release|iPhone.Build.0 = Release|iPhone
 		{32B13266-B7D2-43C5-9888-4D4D6C70310B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{32B13266-B7D2-43C5-9888-4D4D6C70310B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Ad-Hoc|iPhone.ActiveCfg = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Ad-Hoc|iPhone.Build.0 = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.AppStore|iPhone.Build.0 = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Debug|iPhone.Build.0 = Debug|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Release|iPhone.ActiveCfg = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Release|iPhone.Build.0 = Release|iPhone
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EA0E8D20-ECDB-45D3-BBD5-20EAC067D823}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{93027FF2-0AA6-4106-A3B3-374F5FE999A0}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{93027FF2-0AA6-4106-A3B3-374F5FE999A0}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{93027FF2-0AA6-4106-A3B3-374F5FE999A0}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
