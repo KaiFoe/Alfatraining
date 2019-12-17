@@ -9,13 +9,10 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace DragDropUebung
+namespace Animationen
 {
     [Register ("ViewController")]
     partial class ViewController
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }

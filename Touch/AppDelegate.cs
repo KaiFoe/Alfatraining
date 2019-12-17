@@ -43,6 +43,11 @@ namespace Touch
 		public override void WillTerminate (UIApplication application)
 		{
 		}
-	}
+
+        public override bool FinishedLaunching(UIApplication application)
+        {
+            return true;
+        }
+    }
 }
 
