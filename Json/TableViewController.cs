@@ -15,25 +15,28 @@ namespace Json
         private const string url = "http://rallycoding.herokuapp.com/api/music_albums";
         //private HttpClient httpClient = new HttpClient();
         List<Items> itemList = new List<Items>();
+        MyRequest request;
 
         public TableViewController (IntPtr handle) : base (handle)
         {
+            request = new MyRequest();
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             OnGetList();
-           
+            
 
             UIBarButtonItem addButton = new UIBarButtonItem(UIBarButtonSystemItem.Add, (sender, args) =>
             {
-                var detailViewController = Storyboard.InstantiateViewController("DetailViewController") as UIViewController;
-                
+                var detailViewController = Storyboard.InstantiateViewController("DetailViewController") as DetailViewController;
+                detailViewController.itemList = itemList;
                 NavigationController.PushViewController(detailViewController, true);
             });
             NavigationItem.SetRightBarButtonItem(addButton, true);
 
+            request.getRequest("103919");
            
         }
 
@@ -52,25 +55,10 @@ namespace Json
                 itemList = JsonConvert.DeserializeObject<List<Items>>(content);
                 TableView.Source = new TableSource(itemList);
                 TableView.ReloadData();
-                //ObservableCollection<Items> trends = new ObservableCollection<Items>(tr);
-                
-                //TableView.Source = trends;
             } catch (Exception ex)
             {
                 Console.WriteLine("Fehler: " + ex.Message);
             }
-        }
-
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            base.PrepareForSegue(segue, sender);
-
-            var detailViewController = segue.DestinationViewController as DetailViewController;
-
-            //if (detailViewController != null)
-            //{
-                detailViewController.itemList = itemList;
-            //}
         }
     }
 }

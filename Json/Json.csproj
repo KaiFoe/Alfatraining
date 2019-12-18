@@ -141,6 +141,7 @@
     <Compile Include="Items.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MyRequest.cs" />
     <Compile Include="TableSource.cs" />
     <Compile Include="TableViewController.cs" />
     <Compile Include="TableViewController.designer.cs">
