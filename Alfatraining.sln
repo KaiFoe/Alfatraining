@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animationen", "Animationen\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing", "Drawing\Drawing.csproj", "{4D667ADE-6E2D-463D-B712-28BCEC9262E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json", "Json\Json.csproj", "{D9837697-5986-463A-A37C-BA610B816785}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -199,6 +201,22 @@ Global
 		{4D667ADE-6E2D-463D-B712-28BCEC9262E6}.Release|iPhone.Build.0 = Release|iPhone
 		{4D667ADE-6E2D-463D-B712-28BCEC9262E6}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{4D667ADE-6E2D-463D-B712-28BCEC9262E6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Ad-Hoc|iPhone.ActiveCfg = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Ad-Hoc|iPhone.Build.0 = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.AppStore|iPhone.Build.0 = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Release|iPhone.Build.0 = Release|iPhone
+		{D9837697-5986-463A-A37C-BA610B816785}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D9837697-5986-463A-A37C-BA610B816785}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
