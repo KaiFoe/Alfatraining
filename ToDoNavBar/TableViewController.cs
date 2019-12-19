@@ -7,6 +7,7 @@ namespace ToDoNavBar
     public partial class TableViewController : UITableViewController
     {
         TableSource tableSource;
+        DBHelper dbHelper = new DBHelper();
 
         public TableViewController (IntPtr handle) : base (handle)
         {
@@ -18,6 +19,9 @@ namespace ToDoNavBar
             tableView.Source = new TableSource();
             tableSource = (TableSource)tableView.Source;
 
+            dbHelper.CreateDB();
+            tableSource.taskList = dbHelper.getAllTasks();
+
             UIBarButtonItem buttonAdd = new UIBarButtonItem(UIBarButtonSystemItem.Add, (sender, args) =>
             {
                 CreateAlertDialog(tableSource);
@@ -25,6 +29,7 @@ namespace ToDoNavBar
 
             UIBarButtonItem buttonDeleteAll = new UIBarButtonItem(UIBarButtonSystemItem.Trash, (object sender, EventArgs args) =>
             {
+                dbHelper.deleteAllTasks();
                 tableSource.taskList.Clear();
                 tableView.ReloadData();
             });
@@ -57,6 +62,8 @@ namespace ToDoNavBar
                     newTask.CreateDate = DateTime.Now;
                     tableSource.taskList.Add(newTask);
                     tableView.ReloadData();
+
+                    dbHelper.addTask(newTask);
                 }
             };
         }
@@ -77,6 +84,9 @@ namespace ToDoNavBar
                 {
                     currentTask.Name = alert.GetTextField(0).Text;
                     tableSource.taskList[indexPath.Row].Name = currentTask.Name;
+
+                    dbHelper.updateTask(currentTask);
+
                     tableView.BeginUpdates();
                     tableView.ReloadRows(tableView.IndexPathsForVisibleRows, UITableViewRowAnimation.Automatic);
                     tableView.EndUpdates();
@@ -98,9 +108,11 @@ namespace ToDoNavBar
         {
             var point = swipeGestureRecognizer.LocationInView(tableView);
             var indexPath = tableView.IndexPathForRowAtPoint(point);
+
+            dbHelper.deleteTask(tableSource.taskList[indexPath.Row]);
+
             tableSource.taskList.RemoveAt(indexPath.Row);
-            tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-            
+            tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);  
         }
     }
 }

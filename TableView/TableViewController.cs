@@ -37,3 +37,19 @@ namespace TableView
         }
     }
 }
+
+public override void LayoutSubviews()
+{
+    base.LayoutSubviews();
+    imageView.Frame = new CGRect(ContentView.Bounds.Width - 63, 5, 33, 33);
+    headingLabel.Frame = new CGRect(5, 4, ContentView.Bounds.Width - 63, 25);
+    subheadingLabel.Frame = new CGRect(100, 18, 100, 20);
+}
+
+
+static UIImage FromUrl(string uri)
+{
+    using (var url = new NSUrl(uri))
+    using (var data = NSData.FromUrl(url))
+        return UIImage.LoadFromData(data);
+}
