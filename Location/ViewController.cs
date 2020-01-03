@@ -150,9 +150,9 @@ namespace Location
 
             #region Suchleiste in der Map
             //var searchResultContainer = new SearchResultsViewController(mapView);
-            var searchUpdater = new UISearchResultsUpdating();
+            //var searchUpdater = new UISearchResultsUpdating();
 
-            UISearchController searchController = new UISearchController(searchResultsController: null);
+            //UISearchController searchController = new UISearchController(searchResultsController: null);
             
             #endregion
         }

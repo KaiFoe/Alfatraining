@@ -1,7 +1,9 @@
 using CoreLocation;
 using MapKit;
 using System;
+using System.Linq;
 using UIKit;
+using Xamarin.Essentials;
 
 namespace MapDemo
 {
@@ -13,6 +15,7 @@ namespace MapDemo
 
         private MapViewDelegate mapViewDelegate;
 
+        public CLLocationCoordinate2D newLocation;
         public MapViewController (IntPtr handle) : base (handle) { }
 
         public override void ViewDidLoad()
@@ -63,6 +66,14 @@ namespace MapDemo
             searchController.HidesNavigationBarDuringPresentation = false;
             NavigationItem.TitleView = searchController.SearchBar;
             DefinesPresentationContext = true;
+
+
+            //adresse in koordinaten umwandeln
+            getCoordinates("Chennai International Airport");
+            mapCenter = newLocation;
+            map.CenterCoordinate = mapCenter;
+
+            getAdress();
         }
 
         protected override void Dispose(bool disposing)
@@ -83,6 +94,63 @@ namespace MapDemo
             if (locationManager != null)
             {
                 locationManager.Dispose();
+            }
+        }
+
+        public async void getCoordinates (string adress)
+        {
+            try
+            {
+                var locations = await Geocoding.GetLocationsAsync(adress);
+
+                var location = locations?.FirstOrDefault();
+                if (location != null)
+                {
+                    newLocation = new CLLocationCoordinate2D(location.Latitude, location.Longitude);
+                }
+            } catch (FeatureNotEnabledException fnsEx)
+            {
+                Console.WriteLine("Fehler : " + fnsEx.Message);
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Fehler: " + ex.Message);
+            }
+        }
+
+        public async void getAdress()
+        {
+            try
+            {
+                var lat = 47.673988;
+                var lon = -122.121513;
+
+                var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
+
+                var placemark = placemarks?.FirstOrDefault();
+                if (placemark != null)
+                {
+                    var geocodeAddress =
+                        $"AdminArea:       {placemark.AdminArea}\n" +
+                        $"CountryCode:     {placemark.CountryCode}\n" +
+                        $"CountryName:     {placemark.CountryName}\n" +
+                        $"FeatureName:     {placemark.FeatureName}\n" +
+                        $"Locality:        {placemark.Locality}\n" +
+                        $"PostalCode:      {placemark.PostalCode}\n" +
+                        $"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                        $"SubLocality:     {placemark.SubLocality}\n" +
+                        $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                        $"Thoroughfare:    {placemark.Thoroughfare}\n";
+
+                    Console.WriteLine(geocodeAddress);
+                }
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Handle exception that may have occurred in geocoding
             }
         }
     }

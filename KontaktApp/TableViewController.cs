@@ -27,7 +27,7 @@ namespace KontaktApp
 
             UIBarButtonItem buttonDeleteAll = new UIBarButtonItem(UIBarButtonSystemItem.Trash, (object sender, EventArgs args) =>
             {
-                dbHelper.deleteAllTasks();
+                dbHelper.deleteAllContact();
                 tableSource.contactList.Clear();
                 TableView.ReloadData();
             });
