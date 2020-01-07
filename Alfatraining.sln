@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localizatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts_Kai", "Contacts\Contacts_Kai.csproj", "{F992F852-88E1-4778-8289-DA8A4BA55689}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "..\iPhone-Kurs\Kontakt\Contacts\Contacts.csproj", "{08F05190-711C-43BB-B45D-56791A5D935C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "Kontakt\Contacts\Contacts.csproj", "{08F05190-711C-43BB-B45D-56791A5D935C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
